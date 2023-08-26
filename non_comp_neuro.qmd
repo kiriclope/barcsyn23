@@ -1,5 +1,6 @@
 ---
 title: "Non Computational Neuroscience in a nutshell"
+to: pdf
 format:
   revealjs:
    theme: simple
