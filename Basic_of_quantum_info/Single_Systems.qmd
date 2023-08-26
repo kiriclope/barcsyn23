@@ -1,7 +1,0 @@
----
-title: "Single Systems"
-format:
-  html:
-    code-fold: true
-jupyter: python3
----
