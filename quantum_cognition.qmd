@@ -1,0 +1,482 @@
+---
+title: "Non Computational Neuroscience in a nutshell"
+format:
+  revealjs:
+   theme: simple
+   code-fold: true
+   smaller: true
+   scrollable: false
+---
+
+## Disclaimer {background-color="black" background-image="./img/feynman.jpg" background-size="contain"}
+<!-- {{ < video https://youtu.be/P1ww1IXRfTA > }} -->
+It's fun to imagine!
+
+## Meet Alice
+<!-- :::{.fragment} -->
+<!-- The Linda problem is a typical example showing conjunction fallacy -->
+<!-- ::: -->
+
+:::{.fragment}
+"Alice is 25 years old, single, outspoken, and very bright. She
+majored in physics. As a student she was deeply concerned with
+issues of discrimination and social justice, and also participated in
+anti-nuclear demonstrations."
+:::
+
+:::{.fragment}
+Which of the following is more probable?
+:::
+
+:::{.fragment}
+(A) Alice is looking for a Ph.D.
+:::
+
+:::{.fragment}
+(B) Alice is looking for a Ph.D. and works in a climate activist group.
+:::
+
+:::{.footer}
+adapted from Tversky and Kahneman, 1983
+:::
+
+## Alice looks for a Ph.D.
+Alice is considering joining BARCYSN but is having a hard time choosing a PI.
+
+![](./img/perfect_pi.svg){.absolute left=40%}
+
+## Alice looks for a Ph.D.
+![](./img/perfect_pi_1.svg)
+
+## Alice looks for a Ph.D.
+![](./img/perfect_pi_2.svg)
+
+## Alice looks for a Ph.D.
+![](./img/perfect_pi_2_1.svg)
+
+## Alice looks for a Ph.D.
+![](./img/perfect_pi_2_1.svg)
+
+## Alice looks for a Ph.D.
+![](./img/perfect_pi_3_1.svg)
+
+## Alice looks for a Ph.D.
+![](./img/perfect_pi_3_2.svg)
+
+## Alice looks for a Ph.D.
+![](./img/join_pass.svg)
+
+## Alice looks for a Ph.D.
+![](./img/join_pass_2.svg)
+
+## Alice looks for a Ph.D.
+What if we gave Alice a little help? <br>
+And asked her to categorize before deciding.
+![](./img/good_bad.svg)
+
+## Alice looks for a Ph.D.
+![](./img/good_bad_1.svg)
+
+## Alice looks for a Ph.D.
+![](./img/good_bad_1_1.svg)
+
+## Alice looks for a Ph.D.
+![](./img/good_bad_2_1.svg)
+
+## Alice looks for a Ph.D.
+![](./img/good_bad_2_2.svg)
+
+## Alice looks for a Ph.D.
+![](./img/good_bad_2_2.svg)
+
+## Will Alice join Barcsyn?
+
+:::{.fragment}
+Decision only
+
+![](./img/join_pass_2.svg){width=80%}
+:::
+
+:::{.fragment}
+Categorization then decision
+
+![](./img/good_bad_all_2.svg){width=80%}
+:::
+
+:::{.footer}
+adapted from Busemeyer et al., 2009
+:::
+
+## Alice runs a hard bargain
+Alice shares the animal facility with Alexis.
+
+:::{.fragment}
+|                  | Alexis Defects               | Alexis Cooperates             |
+|------------------+------------------------------+-------------------------------|
+| Alice Defects    | Alice gets 8h and Alexis too | Alice gets 10h and Alexis 6h  |
+| Alice Cooperates | Alice gets 6h and Alexis 10h | Alice gets 10h and Alexis too |
+:::
+
+:::{.fragment}
+As is, Alice defects $66$ % of the time.
+:::
+:::{.fragment}
+Knowing that Alexis defects/cooperates, Alice defects 97% / 84% of the time.
+::::
+
+:::{.footer}
+adapted from Shafir and Tversky, 1992
+:::
+
+## What did we discover?
+
+:::{.incremental}
+
+- The "Meet Alice" problem is a typical example showing conjunction fallacy,
+$$ P(A \cap B) \gt P(A) \text{ or } P(B) $$
+
+- In the second example, categorization leads to interference effects, so that
+$$ P(G) P(J|G) + P(B) P(J|B) \gt P(J)$$
+:::
+
+## What did we discover?
+
+:::{.incremental}
+- In the last example, we see a violation of the sure-thing principle: <br> <br>
+*if you prefer action A over B under the state of the world X, and you also prefer action A over B
+under the opposite state of the world not X, then you should prefer action A over B even if the state of the world is unknown.
+*<br>
+<br>
+- Alice defects when she knows Alexis' choice
+
+- but Alice cooperates when the state of Alexis' choice is unknown ...
+:::
+
+:::{.notes}
+if you prefer action A over B under the state of the world X, and you also prefer action A over B
+under the opposite state of the world not X, then you should prefer action A over B even if the state of the world is unknown.
+:::
+
+## Classical probability theory
+
+Events are subsets of a universal set U. Events, such as A and B,
+are subsets of U.
+
+The state of the cognitive system is represented by a function P
+defined on the subsets in U, and the probability of an event A equals P(A).
+
+$$ P(A) \geq 0 \text{, and } P(U) = 1 $$
+
+If $A \cap B = 0$, then $P(A \cup B) = P(A) + P(B)$
+
+The probability of event B given A equals $$ P(B|A) = \frac{P(A \cap B)}{P(A)}$$
+
+Law of total probability: $$ P(B) = P(A \cap B) + P(\bar{A} \cap B)$$
+
+## Quantum probability theory
+Events are subspaces of a Hilbert space H. Events, such as A
+correspond to subspaces H~A~, respectively of H. Associated with these subspaces are projectors P~A~.
+
+If their projectors are commutative, that is, P~A~P~B~ = P~B~P~A~, then
+the events A and B are compatible. Otherwise, they are incompatible.
+
+The state of the cognitive system is represented by a unit
+length vector S in the vector space, and the probability of event A equals
+
+$$ || P_A . S||^2 \geq 0 \text{ and } || P_H . S ||^2 = 1 $$
+
+If P~A~P~B~ = 0, then ||(P~A~ + P~B~) .S||^2^ = ||P~A~ . S||^2^ + ||P~B~ . S||^2^
+
+The probability of event B given A equals
+$$ \frac{|| P_B P_A . S ||^2}{|| P_A . S ||^2} $$
+
+No law of total probability
+
+## What did we solve?
+:::{.incremental}
+
+- Conjunction fallacy (A->PhD, B->Activist)<br>
+A and B are incompatible events and must be then treated sequentially.
+$$S \rightarrow B \rightarrow A \text{ or }  S \rightarrow A $$
+$$ \lvert \langle A \vert B \rangle \langle B \lvert S \rangle \rvert ^2 \gt \lvert \langle A \vert S \rangle \rvert ^2$$
+
+- Interference of categorization on decision making <br>
+Decide Only: (sum two path amplitudes and square)
+$$ P(S \rightarrow J) = \lvert \langle G \vert S \rangle \langle J \lvert G \rangle + \langle B \vert S \rangle \langle J \lvert B \rangle \rvert ^2 $$
+Categorize then decide: (sum path probabilities across two paths)
+$$ P(S \rightarrow J) = \lvert \langle J  \lvert S \rangle  \rvert ^2 =	\lvert \langle G \vert S \rangle \langle J \lvert G \rangle \rvert ^2 + \lvert \langle B \vert S \rangle \langle J \lvert B \rangle \rvert ^2 $$
+:::
+
+:::{.notes}
+
+:::
+## To sum up
+::: {.incremental}
+
+- Psychological measures, such as judgments, often
+  require one to take different perspectives, which
+  have to be taken sequentially, and the context
+  generated by the first measure disturbs subsequent
+  ones.
+
+- Some psychological states cannot be defined with respect
+  to definite values but, instead, that all possible
+  values within the superposition have
+  some potential for being expressed
+
+- Go for a quantum description
+:::
+
+## The measurement problem
+:::{.incremental}
+- One of the key features of quantum theory is that observing the system changes the behavior of the system.
+
+- Observation causes a superposition state, containing the disposition for many states to be measured, to reduce to one deﬁnite state that will be observed in the actual measurement.
+
+- Some quantum theorists (e.g.,von Neumann, London and Bauer, Wigner) occasionally speculated that human consciousness plays a role to cause the reduction of superposition states.
+:::
+
+## Penrose and Hameroff's idea
+<div style="text-align: center;">
+![](./img/penrose.svg){width=85%}
+</div>
+
+## Orch Or in a few sentences
+
+:::{.incremental}
+- Quantum brain computations occur inside microtubules that lie within the protection of the cytoskeleton of a neuron.
+
+- The microtubules are interconnected at the gap junctions of dendrites, and these connections extend throughout the cortex to produce a coherent entangled quantum state.
+
+- The collapse of the quantum superposition state within the microtubules can trigger axonal spikes and govern behavior.
+
+- This state reduction also generates a conscious experience.
+:::
+
+## Orch Or in one diagram
+<div style="text-align: center;">
+![](./img/orch_or_neuron.svg){width=85%}
+</div>
+
+## Diosi-Penrose's theory
+<div style="text-align: center;">
+![](./img/orch_or_theory.svg){width=100%}
+</div>
+
+## Diosi-Penrose's theory
+<div style="text-align: center;">
+![](./img/orch_or_theory_2.svg){width=100%}
+</div>
+
+## Criticisms
+- The hypothesis by Penrose and Hameroﬀ has received a lot of criticism.<br>
+
+- It is argued that in the “hot and wet” highly interacting brain, decoherence (the breakdown of the superposition state) occurs much too fast
+to allow any relevant eﬀects of quantum states for comparably slow brain processes, and even more so for psychological thought processes.
+
+## Quantum Computing 101	{background-video="quantum-computing.mp4"}
+::: {.footer}
+credits Wired.com
+:::
+
+## Quantum Leaps
+
+:::{.incremental}
+- 1980 Physicist Paul Benioff suggests quantum mechanics could be used for computation.
+
+- 1981 Nobel-winning physicist Richard Feynman, at Caltech, coins the term quantum computer.
+
+- 1985 Physicist David Deutsch, at Oxford, maps out how a quantum computer would operate, a blueprint that underpins the nascent industry of today.
+
+- 1994 Mathematician Peter Shor, at Bell Labs, writes an algorithm that could tap a quantum computer’s power to break widely used forms of encryption.
+
+- 2007 D-Wave, a Canadian startup, announces a quantum computing chip it says can solve Sudoku puzzles, triggering years of debate over whether the company’s technology really works.
+
+- 2013 Google teams up with NASA to fund a lab to try out D-Wave’s hardware.
+
+- 2016 IBM puts some of its prototype quantum processors on the internet for anyone to experiment with.
+:::
+
+## Qubits
+Like a classical computer, a quantum computer operates on bits.
+
+Quantum bits, or qubits, can represent the values 0 and 1, or linear combinations of both.
+
+<div style="text-align: center;">
+
+```{python}
+from math import pi
+from qiskit_textbook.widgets import plot_bloch_vector_spherical
+coords = [pi/2,0,1] # [Theta, Phi, Radius]
+plot_bloch_vector_spherical(coords) # Bloch Vector with spherical coordinates
+```
+
+</div>
+
+## Interference
+To see how this resource is utilized in quantum computation we first turn to a classical analog: noise cancellation.
+
+![](./img/noise_cancel.png)
+
+:::{.notes}
+Noise cancellation, as done in noise cancelling headphones for example, is performed by employing superposition and the principle of interference to reduce the amplitude of unwanted noise by generating a tone of approximately the same frequency and amplitude, but out of phase by a value of pi (or any other odd integer of pi). As shown above, when the phase difference is close to an odd multiple of, the superposition of the two waves results in interference, and an output that is significantly reduced compared to the original. The result is the signal of interest unencumbered by noise. Although this processing is done by digital circuits, the amplitude and phase are continuous variables that can never be matched perfectly, resulting in incomplete correction.
+:::
+
+## Interference
+
+![](./img/quantum_interference.png){width=100%}
+
+::: {.notes}
+A general computation on a quantum computer proceeds in very much the same way as noise cancellation.
+To begin, one prepares a superposition of all possible computation states.
+This is then used as an input to a quantum circuit that selectively interferes the components of the superposition according to a prescribed algorithm.
+What remains after cancelling the relative amplitudes and phases of the input state is the solution to the computation performed by the quantum circuit.
+:::
+
+<!-- ## Entanglement -->
+<!-- The second principle of quantum mechanics that quantum computation can utilize is the phenomena of entanglement. -->
+
+<!-- Entanglement refers to states of more than one qubit (or particles in general) in which the combined state of the qubits contains more information than the qubits do independently. -->
+
+<!-- The overwhelming majority of multi-qubit quantum states are entangled, and represent a valuable resource. -->
+
+<!-- For example, entangled states between qubits can be used for quantum teleportation, where a shared entangled state of two qubits can be manipulated to transfer information from one qubit to another, regardless of the relative physical proximity of the qubits. -->
+
+<!-- Entangled states, as natural states of quantum systems, are also of importance in disciplines such as quantum chemistry and quantum simulation where the solution(s) often take the form of entangled multi-qubit states. One can also utilize highly-entangled quantum states of multiple qubits to, for example, generate certifiably random numbers. -->
+
+## Quantum circuits
+::: {.notes}
+Algorithms and applications that utilize quantum mechanical resources can be easily and efficiently written in the language of quantum circuits. A quantum circuit is a computational routine consisting of coherent quantum operations on quantum data, such as that held in qubits, and concurrent real-time classical computation. Each horizontal line, or wire in a circuit represents a qubit, with the left end of the wire being the initial quantum data, and the right being the final quantum data generated by the quantum circuit’s computation. Operations on qubits can be placed on these wires, and are represented by boxes.
+:::
+
+Quantum circuits enable a quantum computer to take in classical information and output a classical solution, leveraging quantum principles such as interference and entanglement to perform the computation.
+
+<div style="text-align: center;">
+![](./img/teleportation_detailed.png){width=70%}
+</div>
+
+## Quantum circuits
+A typical quantum algorithm workflow consists of:
+
+- The problem we want to solve,
+
+- A classical algorithm that generates a description of a quantum circuit,
+
+- The quantum circuit that needs to be run on quantum hardware,
+
+- And the output classical solution to the problem that it produces.
+
+## Quantum gates
+
+Quantum gates form the primitive operations on quantum data. Quantum gates represent information preserving, reversible transformations on the quantum data stored in qubits.
+These “unitary” transformations represent the quantum mechanical core of a quantum circuit.
+
+- Single qubit gates
+
+Classical example: The NOT gate
+```{mermaid}
+flowchart LR
+  A["0 <br> 1"] --> B[NOT]
+  B --> C["1 <br> 0"]
+  style A fill:#ffffff,stroke-width:0px
+  style C fill:#ffffff,stroke-width:0px
+```
+
+Quantum example:
+quantum gates are represented by unitary matrices: $$ \mathcal{U}^{\dagger} \mathcal{U}=\mathcal{1}$$
+
+## Pauli Matrices
+- bit flit
+```{mermaid}
+flowchart LR
+  A["|0> <br> |1>"] --> B["#963;x"]
+  B --> C["|1> <br> |0>"]
+  style A fill:#ffffff,stroke-width:0px
+  style C fill:#ffffff,stroke-width:0px
+```
+
+- phase flip
+```{mermaid}
+flowchart LR
+  A["|0> <br> |1>"] --> B["#963;z"]
+  B --> C["|+> <br> |->"]
+  style A fill:#ffffff,stroke-width:0px
+  style C fill:#ffffff,stroke-width:0px
+```
+
+- bit and phase flip
+```{mermaid}
+flowchart LR
+  A["|0> <br> |1>"] --> B["#963;y"]
+  B --> C["|i> <br> |-i>"]
+  style A fill:#ffffff,stroke-width:0px
+  style C fill:#ffffff,stroke-width:0px
+```
+
+## Two qubit gates
+
+Classical example
+
+```{mermaid}
+flowchart LR
+A[x <br> y] --> B[XOR]
+B --> C["x #10753; y"]
+style A fill:#ffffff,stroke-width:0px
+style C fill:#ffffff,stroke-width:0px
+```
+
+Quantum example: CNOT <=> reversible XOR
+
+<div style="text-align: center;">
+
+```{python}
+from qiskit import QuantumCircuit
+qc = QuantumCircuit(2)
+qc.cx(0,1)
+qc.draw('mpl')
+```
+
+</div>
+
+::: {.notes}
+Quantum gates form the primitive operations on quantum data. Quantum gates represent information preserving, reversible transformations on the quantum data stored in qubits. These “unitary” transformations represent the quantum mechanical core of a quantum circuit. Some gates such as (also written as) and  have classical analogs such as bit-flip and operations, respectively, while others do not. The Hadamard () gate, along with the parameterized rotates and generate superposition states, while gates such as and impart phases that can be used for interference. Two-qubit gates like the  gate are used to generate entanglement between pairs of qubits, or to “kick” the phase from one qubit to another. In contrast to gates, operations like “measurement”, represented by the meter symbol in a box with a line connecting to a “target” wire, extract partial information about a qubit’s state, often losing the phase, to be able to represent it as a classical bit and write that classical bit onto the target wire (often a fully classical wire in some readout device). This is the typical way to take information from the quantum data into a classical device. Note that with only, and measurement gates, i.e. a universal gate set, we can construct any quantum circuit, including those efficiently computing the dynamics of any physical system in nature.
+:::
+
+## {background-iframe="https://research.ibm.com/interactive/system-one/" background-interactive=true}
+
+:::{.notes}
+Quantum computers can be constructed out of any quantum technology that allows for defining qubit elements, and can implement single- and multi-qubit gate operations with high-fidelity.
+At present, architectures based on superconducting circuits, trapped-ions, semiconducting quantum-dots, photons, and neutral atoms, are actively being developed, and many are accessible to users over the internet.
+Qiskit is agnostic with respect to the underlying architecture of a given quantum system, and can compile a quantum circuit to match the entangling gate topology of a quantum device, map the circuit instructions into the native gate set of the device, and optimize the resulting quantum circuit for enhanced fidelity.
+:::
+
+## Quantum Computers
+<div style="text-align: center;">
+![](./img/system_one.jpeg){height=50%}
+</div>
+
+## Quantum Computers
+
+:::{.notes}
+As with the noise cancellation example above, the amplitude and phase of qubits are continuous degrees of freedom upon which operations can never be done exactly. These gates errors, along with noise from the environment in which a quantum computer resides, can conspire to ruin a computation if not accounted for in the compilation process, and may require additional mitigation procedures in order to obtain a high-fidelity output on present day quantum systems susceptible to noise. Qiskit is capable of taking into account a wide range of device calibration metrics (see figure below) in its compilation strategy, and can select an optimal set of qubits on which to run a given quantum circuit. In addition, Qiskit hosts a collection of noise mitigation techniques for extracting a faithful representation of a quantum circuits output.
+:::
+
+<div style="text-align: center;">
+![](./img/system_error.png)
+</div>
+
+## Quantum ML
+![](./img/hybridnetwork.png){width=100%}
+
+## {background-color="white" background-image="./img/neuralnetworkQC.png" background-size="contain"}
+
+:::{.notes}
+To create a quantum-classical neural network, one can implement a hidden layer for our neural network using a parameterized quantum circuit. By "parameterized quantum circuit", we mean a quantum circuit where the rotation angles for each gate are specified by the components of a classical input vector. The outputs from our neural network's previous layer will be collected and used as the inputs for our parameterized circuit. The measurement statistics of our quantum circuit can then be collected and used as inputs for the following layer. A simple example is depicted below:
+:::
+
+## {background-iframe="https://quantum-computing.ibm.com/programs/researchers" background-interactive=true}
+
+## {background-iframe="https://quantum-computing.ibm.com/composer/docs/iqx/example-circuits/bell" background-interactive=true}
+
+
+# Thank you
